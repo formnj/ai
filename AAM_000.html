@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="./css/common.css">
+
+	<script src="./js/jquery.js"></script>
+	<script src="./js/common.js"></script>
+</head>
+
+<body>
+	<div id="admin-container" class="type_dark">
+
+		<!-- side bar -->
+		<section class="sidebar"></section>
+		<!-- //side bar -->
+
+		<main class="main">
+			<!-- header -->
+			<div class="header">
+				<div class="title-area">
+					<h2 class="h2">모듈 모음</h2>
+					<button type="button" class="button-manual">매뉴얼</button>
+				</div>
+				<div class="bread-crumb">HOME / 업무관리</div>
+			</div>
+			<!-- //header -->
+			<div class="content-wrap">	
+				<div class="content">
+
+					<div class="area-title">
+						<h4 class="h3">검색영역</h4>
+					</div>
+					<!-- search -->
+					<div class="area-contition">
+						<table>
+							<colgroup>
+								<col width="85px" />
+								<col width="" />
+								<col width="85px" />
+								<col width="" />
+								<col width="85px" />
+								<col width="" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>E-mail ID</th>
+									<td>
+										<label class="input-wrap">
+											<input type="text" value="">
+											<button type="button" class="icon del" onclick="input_btn_fn(this);">삭제</button>
+										</label>
+									</td>
+									<th>이름</th>
+									<td>
+										<label class="input-wrap">
+											<input type="text" value="">
+											<button type="button" class="icon del" onclick="input_btn_fn(this);">삭제</button>
+										</label>
+									</td>
+									<th>상태</th>
+									<td>
+										<label class="select-wrap">
+											<select>
+												<option value="">select</option>
+											</select>
+										</label>
+										<span class="el-checkbox">
+											<input id="checkbox1" type="checkbox" name="checkboxName" checked />
+											<label for="checkbox1">사용 불가 제외</label>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th>회사</th>
+									<td>
+										<label class="input-wrap">
+											<input type="text" value="">
+											<button type="button" class="icon del">삭제</button>
+											<button type="button" class="icon sch">검색</button>
+										</label>
+									</td>
+									<th>소속</th>
+									<td>
+										<label class="select-wrap">
+											<select>
+												<option value="">select</option>
+											</select>
+										</label>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<button type="submit" class="submit">조회</button>
+					</div>
+					<!-- //search -->
+
+					<!-- tab -->
+					<div class="area-title">
+						<h4 class="h3">Tabs</h4>
+					</div>
+					<h4 class="h3">type-01</h4>
+					<div class="common-tabs type-01">
+						<button type="button" class="active">Tab01</button>
+						<button type="button" class="">Tab02</button>
+					</div>
+					<h4 class="h3">type-02</h4>
+					<div class="common-tabs type-02">
+						<button type="button" class="active">Tab01</button>
+						<button type="button" class="">Tab02</button>
+					</div>
+					<!-- //tab -->
+
+					<!-- 그리드제목 -->
+					<div class="area-title">
+						<h3 class="h3">테이블 : 리스트형태</h3>
+						<div class="buttons">
+							<button type="button" class="prime solid">저장</button>
+							<button type="button" class="prime">추가</button>
+							<button type="button">삭제</button>
+							<button type="button" class="point upld">엑셀 업로드</button>
+							<button type="button" class="point dnld">엑셀 다운로드</button>
+							<button type="button" class="refresh">새로고침</button>
+							<label class="select-wrap">
+								<select>
+									<option value="">select</option>
+								</select>
+							</label>
+						</div>
+					</div>
+
+					<!-- 그리드 -->
+					<div class="area-result">
+						<table>
+							<thead>
+								<tr>
+									<th>순번</th>
+									<th>식별자</th>
+									<th>E-mail ID</th>
+									<th>사번</th>
+									<th>회사</th>
+									<th>부서</th>
+									<th>이름</th>
+									<th>직위</th>
+									<th>소속</th>
+									<th>소속변경</th>
+									<th>서비스 그룹</th>
+									<th>상태</th>
+									<th>상태 수정일</th>
+								</tr>
+							</thead>
+                            <tbody>
+                                <tr>
+                                    <td>99</td>
+                                    <td>123460</td>
+                                    <td>choi**@sk.com</td>
+                                    <td></td>
+                                    <td>SK이노베이션</td>
+                                    <td>mySUNI 개발</td>
+                                    <td>홍*동</td>
+                                    <td>팀장</td>
+                                    <td>mySUNI</td>
+                                    <td>변경</td><!-- button or select-->
+                                    <td>mySUNI</td>
+                                    <td></td>
+                                    <td>2024-00-00</td>
+                                </tr>
+                                <tr>
+                                    <td>98</td>
+                                    <td>123460</td>
+                                    <td>choi**@sk.com</td>
+                                    <td></td>
+                                    <td>SK이노베이션</td>
+                                    <td>mySUNI 개발</td>
+                                    <td>홍*동</td>
+                                    <td>팀장</td>
+                                    <td>mySUNI</td>
+                                    <td>변경</td><!-- button or select-->
+                                    <td>mySUNI</td>
+                                    <td></td>
+                                    <td>2024-00-00</td>
+                                </tr>
+                                <tr>
+                                    <td>97</td>
+                                    <td>123460</td>
+                                    <td>choi**@sk.com</td>
+                                    <td></td>
+                                    <td>SK이노베이션</td>
+                                    <td>mySUNI 개발</td>
+                                    <td>홍*동</td>
+                                    <td>팀장</td>
+                                    <td>mySUNI</td>
+                                    <td>변경</td><!-- button or select-->
+                                    <td>mySUNI</td>
+                                    <td></td>
+                                    <td>2024-00-00</td>
+                                </tr>
+
+								<!-- 결과 없을 경우 -->
+								<tr>
+									<td colspan="999">
+										<p class="no-result">조회내역이 없습니다.</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="box-pagination">
+							<a href="" class="move first">첫페이지 이동</a>
+							<a href="" class="move prev">이전페이지 이동</a>
+							<a href="">991</a>
+							<a href="">992</a>
+							<a href="">993</a>
+							<a href="">994</a>
+							<a href="" class="current">995</a>
+							<a href="">996</a>
+							<a href="">997</a>
+							<a href="">998</a>
+							<a href="">999</a>
+							<a href="">1000</a>
+							<a href="" class="move next">다음페이지 이동</a>
+							<a href="" class="move last">마지막페이지 이동</a>
+						</div>
+					</div>
+
+					<div class="area-title">
+						<h3 class="h3">좌우 그리드 타입</h3>
+					</div>
+					<!-- 좌우 그리드 -->
+					<div class="layout-column">
+                        <!-- Grid Left -->
+                        <div class="column">
+							<div class="area-title">
+								<h3 class="h3">테이블 : 상세형태</h3>
+							</div>
+
+							<h4>H4 제목</h4>
+                            <div class="area-regist">
+                                <table>
+                                    <tr>
+                                        <th>신청구분</th>
+                                        <td>서비스 ID 신청</td>
+                                    </tr>
+                                    <tr>
+                                        <th>신청자</th>
+                                        <td>김*니(RF, mySUNI)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>서비스명</th>
+                                        <td>LMS</td>
+                                    </tr>
+                                    <tr>
+                                        <th>제목</th>
+                                        <td>LMS 감사계정 등록 신청</td>
+                                    </tr>
+                                    <tr>
+                                        <th>신청 내용</th>
+                                        <td>
+                                            <p>신규 일반 사용자 강사입니다.</p>
+                                            <p>SUNI ID : snma79@naver.com를 강사로 등록해주세요.</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>완료 희망일</th>
+                                        <td>2024-00-00</td>
+                                    </tr>
+                                    <tr>
+                                        <th>첨부파일</th>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="box-buttons">
+                                <button type="button">요청 철회</button>
+                                <button type="button" class="dark">수정</button>
+                            </div>
+						</div>
+						<!-- //Grid Left -->
+						<!-- Grid Right -->
+                        <div class="column">
+							<div class="area-title">
+								<h3 class="h3">채팅창</h3>
+							</div>
+							<div class="message_wrap">
+                                <div class="list_wrap">
+                                    <div class="inner">
+                                        <!-- loop : 본인이 작성한 글일 경우 item에 'mine' 클래스 추가 -->
+                                        <div class="item mine">
+                                            <!-- 작성자 -->
+                                            <p class="writer">
+                                                <strong>김*니 RF
+                                                    <span>mySUNI</span>
+                                                </strong>
+                                                <em>2023-00-00</em>
+                                            </p>
+                                            <!-- //작성자 -->
+                                            <!-- 내용 -->
+                                            <div class="cont">
+                                                <div>
+                                                    검토자 분들 내일까지 ASAP 검토 요청드립니다.<br/> 내일까지 보고해야 합니다.
+                                                </div>
+                                                <p class="reply_button">
+                                                    <span>김*니 1분전</span>
+                                                    <button>답글입력</button>
+                                                </p>
+                                                <ol class="reply">
+                                                    <li>
+                                                        <!-- 작성자 -->
+                                                        <p class="writer">
+                                                            <strong>김*니 RF
+                                                                <span>mySUNI</span>
+                                                            </strong>
+                                                            <em>32분전</em>
+                                                        </p>
+                                                        <!-- //작성자 -->
+                                                        <div class="cont">
+                                                            <p>답글의 첫번째 줄입니다.<br/> 두번째 줄입니다.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <!-- 작성자 -->
+                                                        <p class="writer">
+                                                            <strong>김*니 RF
+                                                                <span>mySUNI</span>
+                                                            </strong>
+                                                            <em>32분전</em>
+                                                        </p>
+                                                        <!-- //작성자 -->
+                                                        <div class="cont">
+                                                            <p>답글의 첫번째 줄입니다.<br/> 두번째 줄입니다.</p>
+                                                        </div>
+                                                    </li>
+                                                    <!-- 댓글 입력 영역 : 입력영역은 항상 있음 -->
+                                                    <li class="input_form">
+                                                        <label class="input-wrap">
+                                                            <input type="text" value="">
+                                                            <button type="button" class="icon del">삭제</button>
+                                                        </label>
+                                                        <button>답글 입력</button>
+                                                    </li>
+                                                    <!-- //댓글 입력 영역 -->
+                                                </ol>
+
+                                                <!-- file -->
+                                                <ol class="file">
+                                                    <li><a href="#none">SUNI ID 수정요청.pptx</a></li>
+                                                    <li><button class="underline">SUNI ID 금일내 검토요청.pptx</button></li>
+                                                    <li><a href="#none">SUNI ID 수정요청.pptx</a></li>
+                                                    <li><button class="underline">SUNI ID 금일내 검토요청.pptx</button></li>
+                                                    <li><a href="#none">SUNI ID 수정요청.pptx</a></li>
+                                                    <li><button class="underline">SUNI ID 금일내 검토요청.pptx</button></li>
+                                                    <li><a href="#none">SUNI ID 수정요청.pptx</a></li>
+                                                    <li><button class="underline">SUNI ID 금일내 검토요청.pptx</button></li>
+                                                    <li><a href="#none">SUNI ID 수정요청.pptx</a></li>
+                                                    <li><button class="underline">SUNI ID 금일내 검토요청.pptx</button></li>
+                                                    <li><a href="#none">SUNI ID 수정요청.pptx</a></li>
+                                                    <li><button class="underline">SUNI ID 금일내 검토요청.pptx</button></li>
+                                                    <li><a href="#none">SUNI ID 수정요청.pptx</a></li>
+                                                    <li><button class="underline">SUNI ID 금일내 검토요청.pptx</button></li>
+                                                </ol>
+                                                <!-- //file -->
+                                            </div>
+                                            <!-- //내용 -->
+                                        </div>
+                                        <!-- //loop -->
+                                        <!-- 시스템 알림 -->
+                                        <div class="item">
+                                            <p class="writer">
+                                                <strong>시스템 알림
+                                                    <span>요청내용이 수정되었습니다.</span>
+                                                </strong>
+                                                <em>2023-00-00</em>
+                                            </p>
+                                        </div>
+                                        <!-- //시스템 알림 -->
+                                        <div class="item">
+                                            <!-- 작성자 -->
+                                            <p class="writer">
+                                                <strong>김*니 RF
+                                                    <span>mySUNI</span>
+                                                </strong>
+                                                <em>2023-00-00</em>
+                                            </p>
+                                            <!-- //작성자 -->
+                                            <!-- 내용 -->
+                                            <div class="cont">
+                                                <div>
+                                                    <em class="badge">검토완료</em>
+                                                    검토자 분들 내일까지 ASAP 검토 요청드립니다.<br/> 내일까지 보고해야 합니다.
+                                                </div>
+                                                <p class="reply_button">
+                                                    <span>김*니 1분전</span>
+                                                    <button>답글입력</button>
+                                                </p>
+                                                <ol class="reply">
+                                                    <li>
+                                                        <!-- 작성자 -->
+                                                        <p class="writer">
+                                                            <strong>김*니 RF
+                                                                <span>mySUNI</span>
+                                                            </strong>
+                                                            <em>32분전</em>
+                                                        </p>
+                                                        <!-- //작성자 -->
+                                                        <div class="cont">
+                                                            <p>답글의 첫번째 줄입니다.<br/> 두번째 줄입니다.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <!-- 작성자 -->
+                                                        <p class="writer">
+                                                            <strong>김*니 RF
+                                                                <span>mySUNI</span>
+                                                            </strong>
+                                                            <em>32분전</em>
+                                                        </p>
+                                                        <!-- //작성자 -->
+                                                        <div class="cont">
+                                                            <p>답글의 첫번째 줄입니다.<br/> 두번째 줄입니다.</p>
+                                                        </div>
+                                                    </li>
+                                                    <!-- 댓글 입력 영역 : 입력영역은 항상 있음 -->
+                                                    <li class="input_form">
+                                                        <label class="input-wrap">
+                                                            <input type="text" value="">
+                                                            <button type="button" class="icon del">삭제</button>
+                                                        </label>
+                                                        <button>답글 입력</button>
+                                                    </li>
+                                                    <!-- //댓글 입력 영역 -->
+                                                </ol>
+                                            </div>
+                                            <!-- //내용 -->
+                                        </div>
+                                        <div class="item">
+                                            <!-- 작성자 -->
+                                            <p class="writer">
+                                                <strong>김*니 RF
+                                                    <span>mySUNI</span>
+                                                </strong>
+                                                <em>2023-00-00</em>
+                                            </p>
+                                            <!-- //작성자 -->
+                                            <!-- 내용 -->
+                                            <div class="cont">
+                                                <div>
+                                                    <em class="badge">검토완료</em>
+                                                    검토자 분들 내일까지 ASAP 검토 요청드립니다.<br/> 내일까지 보고해야 합니다.
+                                                </div>
+                                                <p class="reply_button">
+                                                    <span>김*니 1분전</span>
+                                                    <button>답글입력</button>
+                                                </p>
+                                                <ol class="reply">
+                                                    <li>
+                                                        <!-- 작성자 -->
+                                                        <p class="writer">
+                                                            <strong>김*니 RF
+                                                                <span>mySUNI</span>
+                                                            </strong>
+                                                            <em>32분전</em>
+                                                        </p>
+                                                        <!-- //작성자 -->
+                                                        <div class="cont">
+                                                            <p>답글의 첫번째 줄입니다.<br/> 두번째 줄입니다.</p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <!-- 작성자 -->
+                                                        <p class="writer">
+                                                            <strong>김*니 RF
+                                                                <span>mySUNI</span>
+                                                            </strong>
+                                                            <em>32분전</em>
+                                                        </p>
+                                                        <!-- //작성자 -->
+                                                        <div class="cont">
+                                                            <p>답글의 첫번째 줄입니다.<br/> 두번째 줄입니다.</p>
+                                                        </div>
+                                                    </li>
+                                                    <!-- 댓글 입력 영역 : 입력영역은 항상 있음 -->
+                                                    <li class="input_form">
+                                                        <label class="input-wrap">
+                                                            <input type="text" value="">
+                                                            <button type="button" class="icon del">삭제</button>
+                                                        </label>
+                                                        <button>답글 입력</button>
+                                                    </li>
+                                                    <!-- //댓글 입력 영역 -->
+                                                </ol>
+                                            </div>
+                                            <!-- //내용 -->
+                                        </div>
+                                    </div>
+                                    <!-- reload -->
+                                    <button class="btn_reload">새로고침</button>
+                                    <!-- //reload -->
+                                </div>
+                                <div class="write_wrap"><!-- 기본 : 검수담당자 / white 클래스 :  일반 -->
+                                    <strong class="alert">김*니님은 검수담당자 입니다. 검수 결과를 등록하세요.</strong>
+                                    <div class="common-tabs"><!-- tab button 활성화 : active 클래스 추가 -->
+                                        <button type="button" class="icon_opinion active"><em>의견</em></button>
+                                        <!-- 일반모드 일 때-->                                        
+                                        <button type="button" class="icon_receipt"><em>접수</em></button>
+                                        <!-- //일반모드 일 때-->
+                                        <!-- 검수담당자 모드일 때 -->
+                                        <button type="button" class="icon_approval"><em>승인</em></button>
+                                        <button type="button" class="icon_reject"><em>반려</em></button>
+                                        <!-- //검수담당자 모드일 때 -->
+                                    </div>
+                                    <div class="input_form">
+                                        <label class="input-wrap">
+                                            <input type="text" value="">
+                                            <button type="button" class="icon del">삭제</button>
+                                        </label>
+                                        <button>의견등록</button><!-- [버튼 문구] 검수담당자 모드 : 의견등록 / 일반 : 접수하기 -->
+                                    </div>
+                                    <span class="file-upload">
+                                        <label for="fileUpload">첨부파일 등록</label>
+                                        <input id="fileUpload" type="file" class="blind" />
+                                    </span>
+                                    <!-- file -->
+                                    <ol class="file">
+                                        <li><span>SUNI ID 수정요청.pptx</span><button class="del">delete</button></li>
+                                        <li><span>SUNI ID 수정요청.pptx</span><button class="del">delete</button></li>
+                                        <li><span>SUNI ID 수정요청.pptx</span><button class="del">delete</button></li>
+                                        <li><span>SUNI ID 수정요청.pptx</span><button class="del">delete</button></li>
+                                        <li><span>SUNI ID 수정요청.pptx</span><button class="del">delete</button></li>
+                                    </ol>
+                                    <!-- //file -->
+                                </div>
+                            </div>
+						</div>
+						<!-- //Grid Right -->
+					<!-- //좌우 그리드 -->
+
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
