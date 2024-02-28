@@ -12,7 +12,7 @@ const ai_babysuni = {
     }, send_msg: function(){
         if($('#msg').val().length > 0){
             $('.ai_chat_cont_inner').append(`<div class="chat_sec user">
-                <div class="chat_inner">`+$('#msg').val()+`</div>
+                <div class="chat_inner">`+$('#msg').val()+`</div> 
             </div>`);
             setTimeout(function(){
                 ai_babysuni.answer_msg($('#msg').val());
