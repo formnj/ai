@@ -34,14 +34,31 @@
                 <img src="./images_jh/ai_chat_logo.png" alt="SUNI talk" style="height:24px;" />
                 <div class="ai_chat_quick">
                     <button class="btn_history">이전 대화</button>
-                    <button class="new_talk" onclick="sam_fnc.reset();">새 대화</button>
+                    <button class="new_talk" onclick="modal.open();">새 대화</button>
                 </div>
             </div>
             <!-- //chat header -->
 
             <!-- chat content -->
             <div class="ai_chat_cont">
+                <!-- ai 시작화면 -->
+                <div class="ai_chat_cont_intro">
+                    <img src="./images_jh/Baby_SUNI_big.png" alt="" />
+                    <strong>안녕하세요 홍길동 님<br/> 저는 mySUNI를 200% 활용할 수 있도록 도와드리는 'OOO' 입니다.</strong>
+                    <p>mySUNI이용 중 궁금하신 사항이나 강의 내용요약 등의 도움이 필요하시면저에게 문의해 주세요.<br/> 홍길동 님께서 이용하신 mySUNI콘텐츠와mySUNI 사용이력을 바탕으로 관심을 가지실 만한 콘텐츠키워드를 다음에 정리해 보았습니다.</p>
+                    <ul class="keyword">
+                        <li><button onclick="ai_babysuni.keyword_select(); sam_fnc.keyword_select();">CES 2024</button></li>
+                        <li><button onclick="ai_babysuni.keyword_select(); sam_fnc.keyword_select();">생성형 AI</button></li>
+                        <li><button onclick="ai_babysuni.keyword_select(); sam_fnc.keyword_select();">챗 GPT</button></li>
+                    </ul>
+                </div>
+                <!-- //ai 시작화면 -->
+
                 <div class="ai_chat_cont_inner">
+
+                    <!-- top button -->
+                    <button class="btn_top" onclick="scroll_top($('.ai_chat_cont'));">top</button>
+                    <!-- //top button -->
 
                     <!-- ai -->
                     <div class="chat_sec ai">
@@ -53,6 +70,35 @@
                                 <li><button onclick="ai_babysuni.keyword_select(); sam_fnc.keyword_select();">생성형 AI</button></li>
                                 <li><button onclick="ai_babysuni.keyword_select(); sam_fnc.keyword_select();">챗 GPT</button></li>
                             </ul>
+
+                            <!-- comment action : active, :hover 시 활성화 이미지 노출됨 -->
+                            <ul class="comment_action">
+                                <li>
+                                    <button class="good">좋아요</button>
+                                    <!-- tooltip -->
+                                    <span class="tooltip">좋은 답변이네요</span>
+                                    <!-- //tooltip -->
+                                </li>
+                                <li>
+                                    <button class="bad">싫어요</button>
+                                    <!-- tooltip -->
+                                    <span class="tooltip">아쉬운 답변이네요</span>
+                                    <!-- //tooltip -->
+                                </li>
+                                <li>
+                                    <button class="refresh">새로고침</button>
+                                    <!-- tooltip -->
+                                    <span class="tooltip">다른답변 보기</span>
+                                    <!-- //tooltip -->
+                                </li>
+                                <li>
+                                    <button class="copy">복사</button>
+                                    <!-- tooltip -->
+                                    <span class="tooltip">복사</span>
+                                    <!-- //tooltip -->
+                                </li>
+                            </ul>
+                            <!-- //comment action -->
                         </div>
                     </div>
                     <!-- //ai -->
@@ -78,6 +124,25 @@
                 <!-- //chat input -->
             </div>
             <!-- //chat bottom -->
+
+            <!-- modal -->
+            <div class="ai_modal">
+                <div class="modal_container">
+                    <div class="ai_modal_content">
+                        <strong>새로운 대화를 시작하시겠습니까?</strong>
+                        <p>기존 대화내용은 삭제됩니다.</p>
+                    </div>
+                    <div class="btnSection">
+                        <button class="btn_cancel" onclick="modal.close(this);">
+                            <em>취소</em>
+                        </button>
+                        <button class="btn_confirm" onclick="modal.close(this); sam_fnc.reset();">
+                            <em>확인</em>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- //modal -->
         </div>
         <!-- //chat wrap -->
     </div>
