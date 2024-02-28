@@ -54,9 +54,18 @@
 .ai_babysuni .chat_sec.ai:before {width:48px; height:64px; margin-right:14px; background:url('../images_jh/btn_ai_icon.png') 50% no-repeat; background-size:cover; content:''; display:block;}
 .ai_babysuni .chat_sec.user {justify-content:end;}
 
-.ai_babysuni .chat_inner {max-width:calc(100% - 40px); padding:20px; word-wrap:break-word; box-sizing:border-box; position:relative; display:inline-block;}
+.ai_babysuni .chat_inner {max-width:calc(100% - 40px); padding:20px; word-wrap:break-word; box-sizing:border-box; position:relative; display:inline-block; animation:0.25s scale;}
 .ai_babysuni .chat_inner:after {background-image:url('../images_jh/icon_ai_chat_split.png'); background-repeat:no-repeat; background-size:250px auto; content:''; position:absolute; top:0; display:block;}
 .ai_babysuni .chat_inner > * + * {margin-top:20px;}
+
+@keyframes scale {
+    from {
+      scale:0;
+    }
+    to {
+      scale:1;
+    }
+  }
 
 .ai_babysuni .btn_top {width:40px; height:40px; font-size:0; background-color:rgba(217, 217, 217, 0.4); border:1px solid #d9d9d9; border-radius:50%; position:fixed; right:24px; bottom:100px; z-index:1;}
 .ai_babysuni .btn_top:before {width:20px; height:20px; margin-top:-10px; margin-left:-10px; background:url('../images_jh/icon_ai_chat_split.png') -40px -30px no-repeat; background-size:250px auto; content:''; position:absolute; top:50%; left:50%; display:block;}
@@ -100,39 +109,3 @@
 
 .ai_modal .modal_container .btnSection .btn_cancel {background-color:#f0f0f0; border-color:#D9D9D9;}
 .ai_modal .modal_container .btnSection .btn_confirm {color:#fff; background-color:#DD052B; border-color:#DD052B;}
-
-
-
-
-.container {
-    display: flex;
-  
-    /* 영역 구분을 위해 선을 설정 */
-    border: 1px solid #cbd5e0;
-    height: 16rem;
-    width: 100%;
-  }
-  .left {
-    /* 초기 크기를 절반으로 설정 */
-    width: 50%;
-  
-    /* 중앙 정렬 */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
-  .resizer {
-    background-color: #cbd5e0;
-    cursor: ew-resize;
-    height: 100%;
-    width: 2px;
-  }
-  .right {
-    /* left가 차지하고 남은 공간에 따라 유동적으로 변화 */
-    flex: 1;
-  
-    /* 중앙 정렬 */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  }
