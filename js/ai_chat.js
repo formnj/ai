@@ -3,7 +3,7 @@ const ai_babysuni = {
         $('.ai_chat_wrap').addClass('active');
     }, close: function(){ //채팅창 닫기
         $('.ai_chat_quick').removeAttr('style');
-        $('.ai_chat_wrap').removeClass('active chatting');
+        $('.ai_chat_wrap').removeClass('active chatting history');
 
         $('.keyword button').removeClass('active');
         ai_babysuni.reset();
@@ -95,7 +95,7 @@ const sam_fnc = {
         }, 400);
     }, active_history: function(){
         event.target.parentElement.style.display='none';
-        $('.ai_chat_wrap').addClass('chatting');
+        $('.ai_chat_wrap').addClass('chatting history');
 
         console.log(chat_history);
         setTimeout(function(){
