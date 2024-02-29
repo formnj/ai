@@ -49,6 +49,10 @@
 .ai_babysuni .ai_chat_cont_intro p {color:#999; font-size:14px; line-height:22px;}
 .ai_babysuni .ai_chat_cont_intro .keyword {margin-top:48px;}
 
+.ai_babysuni .talk_history {list-style:none;}
+.ai_babysuni .talk_history > li + li {margin-top:16px;}
+.ai_babysuni .talk_history button {width:100%; padding:17px 20px; color:#222; font-size:16px; font-weight:bold; background-color:#fff; border-radius:16px; text-align:left;}
+
 .ai_babysuni .chat_sec {display:flex; flex-wrap:wrap;}
 .ai_babysuni .chat_sec + .chat_sec {margin-top:30px;}
 .ai_babysuni .chat_sec.ai:before {width:48px; height:64px; margin-right:14px; background:url('../images_jh/btn_ai_icon.png') 50% no-repeat; background-size:cover; content:''; display:block;}
