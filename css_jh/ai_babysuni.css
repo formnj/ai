@@ -33,6 +33,11 @@
 .ai_babysuni .ai_chat_wrap .ai_chat_input .btn_send.active {background-color:#DD052B;}
 .ai_babysuni .ai_chat_wrap .ai_chat_input .btn_send:before {width:33px; height:32px; background:url('../images_jh/icon_ai_chat_split.png') 0 -30px no-repeat; background-size:250px auto; content:''; position:absolute; top:50%; left:50%; display:block; transform:translate(-50%, -50%);}
 
+.ai_babysuni .ai_chat_wrap.history .ai_chat_input {display:none;}
+.ai_babysuni .ai_chat_wrap .ai_chat_bottom .btn_confirm {width:100%; background-color:#DD052B; border-radius:12px; display:none;}
+.ai_babysuni .ai_chat_wrap .ai_chat_bottom .btn_confirm em {padding:15px 10px; color:#fff; font-size:16px; font-weight:bold; font-style:normal; display:block;}
+.ai_babysuni .ai_chat_wrap.history .ai_chat_bottom .btn_confirm {display:block;}
+
 .ai_babysuni .ai_chat_wrap .ai_chat_cont {width:480px; padding:0 24px; overflow:auto; position:relative; flex:1;}
 .ai_babysuni .ai_chat_wrap .ai_chat_cont::-webkit-scrollbar {width:10px;}
 .ai_babysuni .ai_chat_wrap .ai_chat_cont::-webkit-scrollbar-thumb {background:rgba(0,0,0,0.2); background-clip:padding-box; border:3px solid transparent; border-radius:8px;}
@@ -48,6 +53,10 @@
 .ai_babysuni .ai_chat_cont_intro strong {margin-top:20px; color:#000; font-size:20px; line-height:32px; display:block;}
 .ai_babysuni .ai_chat_cont_intro p {color:#999; font-size:14px; line-height:22px;}
 .ai_babysuni .ai_chat_cont_intro .keyword {margin-top:48px;}
+
+.ai_babysuni .talk_history {list-style:none;}
+.ai_babysuni .talk_history > li + li {margin-top:16px;}
+.ai_babysuni .talk_history button {width:100%; padding:17px 20px; color:#222; font-size:16px; font-weight:bold; background-color:#fff; border-radius:16px; text-align:left;}
 
 .ai_babysuni .chat_sec {display:flex; flex-wrap:wrap;}
 .ai_babysuni .chat_sec + .chat_sec {margin-top:30px;}
