@@ -21,6 +21,7 @@ const ai_babysuni = {
         }, 1000);
     }, reset: function(){ //채팅창 초기화
         $('.ai_chat_cont_inner').empty();
+        $('.ai_chat_wrap').removeClass('history');
     }
 }
 
@@ -66,6 +67,8 @@ const sam_fnc = {
                 `+comment_action+`
             </div>
         </div>`);
+
+        // console.log($('#msg').val().indexOf('설명해줘') > -1);
 
         $('#msg').val('');
         var _target = document.getElementById('msg');
