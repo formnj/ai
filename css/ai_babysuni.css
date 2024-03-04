@@ -112,5 +112,5 @@ a.copy:hover {background-position:-372px -177px;}
 /* 스크롤바 */
 /* 아래의 모든 코드는 영역::코드로 사용 */
 .ai_chat_main::-webkit-scrollbar {width: 10px;}
-.ai_chat_main::-webkit-scrollbar-thumb {height: 30%; border-radius: 10px; background: #217af4;}
+.ai_chat_main::-webkit-scrollbar-thumb {height: 30%; border-radius: 10px; background: #e28696;}
 .ai_chat_main::-webkit-scrollbar-track {background: rgba(33, 122, 244, .1);}

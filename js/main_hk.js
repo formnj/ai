@@ -11,6 +11,7 @@ function modal_open_close(){
 }
 
 function go_chatting(){
+  $('.modal').removeClass('active')
   $('.ai_chat_wrap').addClass('on')
   $('.ai_chat_wrap').removeClass('pre')
   $('.ai_chat_wrap.on.pre').removeClass('record')
