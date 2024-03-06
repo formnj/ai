@@ -30,19 +30,28 @@ const ai_babysuni = {
         const mouseMoveHandler = function (e) {
             // 마우스가 움직이면 기존 초기 마우스 위치에서 현재 위치값과의 차이를 계산
             const dx = x - e.clientX;
-            const dy = e.clientY - y;
-
-            //console.log('m : '+_width+' / '+(dx + ' / '+dy));
+            // const dy = e.clientY - y;
 
             // 크기 조절 중 마우스 커서를 변경함
             // class="resizer"에 적용하면 위치가 변경되면서 커서가 해제되기 때문에 body에 적용
             document.body.style.cursor = 'col-resize';
 
-            panel.style.userSelect = 'none';
-            panel.style.pointerEvents = 'none';
+            // panel.style.userSelect = 'none';
+            // panel.style.pointerEvents = 'none';
 
-            const new_Width = (_width + dx);
-            if(479 < new_Width && new_Width < 781){
+            const new_Width = (_width-2 + dx);
+
+            panel.setAttribute('data-width',new_Width);
+
+            const panel_w = Number(panel.getAttribute('data-width')),
+            min = 480,
+            max = 780;
+
+            if(min > panel_w) {
+                panel.style.width = min+'px'
+            } else if(max < panel_w){
+                panel.style.width = max+'px'
+            } else {
                 panel.style.width = new_Width+'px';
             }
         };
@@ -138,7 +147,6 @@ const sam_fnc = {
         ai_babysuni.scroll();
 
     }, keyword_select: function(){
-        console.log('a : '+event.target.textContent);
         $('#msg').val("'"+event.target.textContent+"' 에 대해서 설명해줘");
         var _target = document.getElementById('msg');
         ai_babysuni.val_chk(_target);
